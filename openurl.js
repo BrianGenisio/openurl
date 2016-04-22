@@ -22,7 +22,7 @@ var launcher = commands[process.platform] || commands['default'];
  */
 
 function open(url, callback) {
-    var child = launcher(command, [url]);
+    var child = launcher(url);
     var errorText = "";
     child.stderr.setEncoding('utf8');
     child.stderr.on('data', function (data) {
